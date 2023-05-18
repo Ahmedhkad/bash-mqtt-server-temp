@@ -1,4 +1,6 @@
 #!/usr/ash
+# using sh on lightweight alpine but you need to install
+# apk update && apk add jq mosquitto-clients
 rm ./temp.json
 while true
 do
