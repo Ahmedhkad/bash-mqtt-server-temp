@@ -23,6 +23,7 @@ user=$(jq -r '.User' ./secret.ini)
 password=$(jq -r '.Password' ./secret.ini)
 topic=$(jq -r '.Topic' ./secret.ini)
 mosquitto_pub -h $server -u $user -P $password -t $topic -f ./temp.json
-
-  sleep 60
+interval="${1:-60}"
+echo "repeating next $interval seconds..."
+  sleep $interval
 done
