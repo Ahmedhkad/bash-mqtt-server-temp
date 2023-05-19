@@ -20,10 +20,9 @@ for file in $FirstDir*_input; do
         echo "," >> temp.json
         echo "\"$CatLabel\":$((CatInput/1000))" >> temp.json
 done
-CatLabel2=$(cat $SecondDir"in0_label")
-CatInput2=$(cat $SecondDir"temp1_input")
+CatGPU=$(cat $SecondDir"temp1_input")
 echo "," >> temp.json
-echo "\"$CatLabe2\":$CatInput2" >> temp.json
+echo "\"GPU_Temp\":$((CatGPU/1000))" >> temp.json
 echo "}" >> temp.json
 # Publish Data
 server=$(jq -r '.Server' ./secret.ini)
