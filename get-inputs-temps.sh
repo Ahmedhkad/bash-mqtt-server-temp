@@ -1,6 +1,5 @@
 #!/usr/ash
-
-
+#test
 for file in /sys/class/hwmon/*/*_input; do 
         CatInput=$(cat $file)
        echo "$file is $CatInput"
