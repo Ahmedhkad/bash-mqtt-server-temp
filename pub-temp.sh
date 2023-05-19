@@ -21,6 +21,7 @@ for file in $FirstDir*_input; do
         echo "\"$CatLabel\":$((CatInput/1000))" >> temp.json
 done
 CatGPU=$(cat $SecondDir"temp1_input")
+echo "Temperture of GPU is $((CatGPU/1000))"
 echo "," >> temp.json
 echo "\"GPU_Temp\":$((CatGPU/1000))" >> temp.json
 echo "}" >> temp.json
